@@ -844,6 +844,13 @@ a[href*='tel'], a[href*='mailto'] {
 	line-height: 1;
 }
 
+.box-icon-modern-header .img-icon{
+	width: 130px;
+	height: auto;
+	text-align: center;
+	margin: 0 auto;
+}
+
 .box-icon-modern-icon:before {
 	background: linear-gradient(to bottom, #e9da5d 0%, #18391C 100%);
 	background-size: 100% auto;

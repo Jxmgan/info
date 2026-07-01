@@ -9618,7 +9618,7 @@ html [class*='section-'].section-top-0 {
 	background-repeat: no-repeat;
 	background-position: 50%;
 	background-color: #27ae93;
-	background-image: url(.../images/radish-cultivish.png);
+	background-image: url(../images/radish-cultividish.jpeg);
 	z-index: -1;
 }
 
@@ -16787,7 +16787,7 @@ h3 + .card-group-corporate {
 	text-align: center;
 	outline: none;
 	cursor: pointer;
-	background-color: #d7d7d7;
+	background-color: #c68c49;
 	transition: all .25s ease-in-out;
 }
 
@@ -16796,11 +16796,11 @@ h3 + .card-group-corporate {
 }
 
 .owl-dot:hover, .owl-dot:focus {
-	background-color: #27ae93;
+	background-color: #c68c49;
 }
 
 .owl-dot.active {
-	background-color: #27ae93;
+	background-color: #c68c49;
 }
 
 .owl-carousel.owl-carousel-light-dots .owl-dot {
@@ -16868,7 +16868,7 @@ h3 + .card-group-corporate {
 
 .owl-nav-2 .owl-prev:hover,
 .owl-nav-2 .owl-next:hover {
-	color: #27ae93;
+	color: #c68c49;
 }
 
 /*
@@ -16882,11 +16882,11 @@ h3 + .card-group-corporate {
 }
 
 .owl-dots-styles-1 .owl-dot:hover, .owl-dots-styles-1 .owl-dot:focus {
-	border-color: #27ae93;
+	border-color: #c68c49;
 }
 
 .owl-dots-styles-1 .owl-dot.active {
-	border-color: #27ae93;
+	border-color: #c68c49;
 }
 
 .owl-style-1 .owl-stage-outer {

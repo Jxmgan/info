@@ -10679,7 +10679,7 @@ html:not(.lt-ie10) .not-animated {
 	align-items: center;
 	padding: 20px;
 	background: #ffffff;
-	transition: .3s all ease;
+	transition: .1s all ease;
 }
 
 .preloader * {

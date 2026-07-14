@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#18391c,#18391c);
+}
+
+.container{
+    width:420px;
+    background:#fff;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 20px 60px rgba(0,0,0,.18);
+}
+
+.logo{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.logo img{
+    width:120px;
+    height:auto;
+    filter:drop-shadow(0 5px 10px rgba(0,0,0,.15));
+}
+
+.title{
+    text-align:center;
+    color:#18391c;
+    font-size:30px;
+    font-weight:700;
+}
+
+.subtitle{
+    text-align:center;
+    color:#777;
+    margin:8px 0 30px;
+}
+
+form{
+    display:none;
+}
+
+form.active{
+    display:block;
+}
+
+.input-box{
+    margin-bottom:18px;
+}
+
+.input-box input{
+    width:100%;
+    padding:15px;
+    border:2px solid #ddd;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.input-box input:focus{
+    border: color #18391c;;
+}
+
+.main-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#18391c;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.main-btn:hover{
+    background:#18391c;
+}
+
+.separator{
+    text-align:center;
+    margin:25px 0;
+    color:#888;
+    position:relative;
+}
+
+.separator::before,
+.separator::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:38%;
+    height:1px;
+    background:#ddd;
+}
+
+.separator::before{
+    left:0;
+}
+
+.separator::after{
+    right:0;
+}
+
+.social{
+    width:100%;
+    padding:13px;
+    border:2px solid #ddd;
+    border-radius:12px;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    font-size:15px;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.social:hover{
+    border-color:#18391c;
+}
+
+.toggle{
+    margin-top:25px;
+    text-align:center;
+    color:#666;
+}
+
+.toggle button{
+    background:none;
+    border:none;
+    color:#18391c;
+    font-weight:600;
+    cursor:pointer;
+    font-size:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="images/logo20.png" alt="Logo">
+</div>
+
+<h1 class="title" id="title">Sign In</h1>
+
+<p class="subtitle" id="subtitle">
+Welcome Back
+</p>
+
+<!-- SIGN IN -->
+
+<form id="signin" class="active">
+
+<div class="input-box">
+<input type="email" placeholder="Email Address">
+</div>
+
+<div class="input-box">
+<input type="password" placeholder="Password">
+</div>
+
+<button class="main-btn">
+Sign In
+</button>
+
+<div class="separator">
+OR
+</div>
+
+<button type="button" class="social">
+<img src="https://www.svgrepo.com/show/475656/google-color.svg" width="22">
+Continue with Google
+</button>
+
+<button type="button" class="social">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" width="18">
+Continue with Apple
+</button>
+
+</form>
+
+<!-- SIGN UP -->
+
+<form id="signup">
+
+<div class="input-box">
+<input type="text" placeholder="Full Name">
+</div>
+
+<div class="input-box">
+<input type="email" placeholder="Email Address">
+</div>
+
+<div class="input-box">
+<input type="password" placeholder="Password">
+</div>
+
+<div class="input-box">
+<input type="password" placeholder="Confirm Password">
+</div>
+
+<button class="main-btn">
+Create Account
+</button>
+
+</form>
+
+<div class="toggle">
+
+<span id="toggleText">
+Don't have an account?
+</span>
+
+<button onclick="changeForm()" id="toggleButton">
+Sign Up
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+let login = true;
+
+function changeForm(){
+
+const signin = document.getElementById("signin");
+const signup = document.getElementById("signup");
+const title = document.getElementById("title");
+const subtitle = document.getElementById("subtitle");
+const text = document.getElementById("toggleText");
+const button = document.getElementById("toggleButton");
+
+if(login){
+
+signin.classList.remove("active");
+signup.classList.add("active");
+
+title.innerHTML="Sign Up";
+subtitle.innerHTML="Create your account";
+
+text.innerHTML="Already have an account? ";
+button.innerHTML="Sign In";
+
+}else{
+
+signup.classList.remove("active");
+signin.classList.add("active");
+
+title.innerHTML="Sign In";
+subtitle.innerHTML="Welcome Back";
+
+text.innerHTML="Don't have an account? ";
+button.innerHTML="Sign Up";
+
+}
+
+login = !login;
+
+}
+
+</script>
+
+</body>
+</html>
